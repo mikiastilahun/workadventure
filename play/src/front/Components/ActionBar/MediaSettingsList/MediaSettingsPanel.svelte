@@ -16,7 +16,9 @@
         devicesNotLoaded,
         rawLocalStreamStore,
         mediaStreamConstraintsStore,
+        audioProcessedLocalAudioTrackStore,
     } from "../../../Stores/MediaStore";
+    import { recordAndPlayBack } from "../../../WebRtc/MicrophoneTest";
     import { cameraPermissionStateStore, microphonePermissionStateStore } from "../../../Stores/MediaStatusStore";
     import { analyticsClient } from "../../../Administration/AnalyticsClient";
     import { localUserStore } from "../../../Connection/LocalUserStore";
@@ -80,6 +82,26 @@
 
     function toggleNoiseSuppression(): void {
         noiseSuppressionEnabledStore.setEnabled(!$noiseSuppressionEnabledStore);
+    }
+
+    const MICROPHONE_TEST_DURATION_MS = 5_000;
+    let microphoneTestState: "idle" | "recording" | "playing" = $state("idle");
+    let sentMicrophoneTrack = $derived(
+        $audioProcessedLocalAudioTrackStore.type === "success" ? $audioProcessedLocalAudioTrackStore.track : undefined,
+    );
+
+    function testMicrophone(): void {
+        if (!sentMicrophoneTrack || microphoneTestState !== "idle") {
+            return;
+        }
+        microphoneTestState = "recording";
+        recordAndPlayBack(sentMicrophoneTrack, MICROPHONE_TEST_DURATION_MS, $speakerSelectedStore, () => {
+            microphoneTestState = "playing";
+        })
+            .catch((e) => console.error("Microphone test failed", e))
+            .finally(() => {
+                microphoneTestState = "idle";
+            });
     }
 
     let isNoiseSuppressionErrorState = $derived(
@@ -231,7 +253,29 @@
                     <div data-testid="noise-suppression-error" class="ms-14 px-3 text-sm text-pop-red">
                         {$noiseSuppressionStateStore.message ?? $LL.actionbar.microphone.noiseSuppressionError()}
                     </div>
+                {:else if $noiseSuppressionStateStore.status === "ready" && $noiseSuppressionEnabledStore}
+                    <div data-testid="noise-suppression-active" class="ms-14 px-3 text-sm text-success">
+                        {$LL.actionbar.microphone.noiseSuppressionActive()}
+                    </div>
                 {/if}
+            </div>
+            <div class="group flex items-center relative z-10 py-1 px-2 overflow-hidden">
+                <Button
+                    variant="secondary"
+                    size="sm"
+                    class="w-full"
+                    dataTestId="microphone-test"
+                    disabled={!sentMicrophoneTrack || !$requestedMicrophoneState || microphoneTestState !== "idle"}
+                    onclick={testMicrophone}
+                >
+                    {#if microphoneTestState === "recording"}
+                        {$LL.actionbar.microphone.microphoneTestRecording()}
+                    {:else if microphoneTestState === "playing"}
+                        {$LL.actionbar.microphone.microphoneTestPlaying()}
+                    {:else}
+                        {$LL.actionbar.microphone.microphoneTest()}
+                    {/if}
+                </Button>
             </div>
         {:else}
             <div class="group flex items-center relative z-10 py-1 px-2 font-sm justify-center">

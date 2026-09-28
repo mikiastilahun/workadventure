@@ -52,6 +52,10 @@ const actionbar: DeepPartial<Translation["actionbar"]> = {
         noiseSuppressionUnsupported: "Ce navigateur ne peut pas exécuter la réduction du bruit personnalisée.",
         noiseSuppressionError:
             "La réduction du bruit personnalisée a échoué. Retour à la réduction du bruit native du navigateur.",
+        noiseSuppressionActive: "Réduction du bruit active",
+        microphoneTest: "Tester mon micro (5 s)",
+        microphoneTestRecording: "Enregistrement… parlez",
+        microphoneTestPlaying: "Lecture…",
         openSettings: "Ouvrir les réglages",
         ignore: "Ignorer",
     },

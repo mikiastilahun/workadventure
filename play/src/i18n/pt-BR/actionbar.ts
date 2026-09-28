@@ -54,6 +54,10 @@ const actionbar: BaseTranslation = {
         noiseSuppressionUnsupported: "Este navegador não pode executar a supressão de ruído personalizada.",
         noiseSuppressionError:
             "A supressão de ruído personalizada falhou. Voltando para a supressão de ruído nativa do navegador.",
+        noiseSuppressionActive: "Redução de ruído ativa",
+        microphoneTest: "Testar meu microfone (5 s)",
+        microphoneTestRecording: "Gravando… fale agora",
+        microphoneTestPlaying: "Reproduzindo…",
         openSettings: "Abrir configurações",
         ignore: "Ignorar",
     },

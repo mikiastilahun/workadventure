@@ -51,6 +51,10 @@ const actionbar: DeepPartial<Translation["actionbar"]> = {
         noiseSuppressionUnsupported: "Deze browser kan aangepaste ruisonderdrukking niet uitvoeren.",
         noiseSuppressionError:
             "Aangepaste ruisonderdrukking is mislukt. Er wordt teruggevallen op de ingebouwde ruisonderdrukking van de browser.",
+        noiseSuppressionActive: "Ruisonderdrukking actief",
+        microphoneTest: "Mijn microfoon testen (5 s)",
+        microphoneTestRecording: "Opnemen… spreek nu",
+        microphoneTestPlaying: "Afspelen…",
         openSettings: "Instellingen openen",
         ignore: "Negeren",
     },
