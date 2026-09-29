@@ -209,6 +209,7 @@ import { ApplicationManager } from "../../Chat/Applications/ApplicationManager";
 import { audioPlaybackStore } from "../../Stores/AudioPlaybackStore";
 import { requestedScreenSharingState } from "../../Stores/ScreenSharingStore";
 import { EnterLeaveScriptingService } from "../Helpers/EnterLeaveScriptingService";
+import { World3dController } from "../../World3d/World3dController";
 import { GameMapFrontWrapper } from "./GameMap/GameMapFrontWrapper";
 import { gameManager } from "./GameManager";
 import { EmoteManager } from "./EmoteManager";
@@ -365,6 +366,7 @@ export class GameScene extends DirtyScene {
     private sharedVariablesManager!: SharedVariablesManager;
     private areaPropertyVariablesManager!: AreaPropertyVariablesManager;
     private playerVariablesManager!: PlayerVariablesManager;
+    private world3dController: World3dController | undefined;
     private scriptingEventsManager!: ScriptingEventsManager;
     private followManager!: FollowManager;
     public inviteManager?: InviteManager;
@@ -825,6 +827,8 @@ export class GameScene extends DirtyScene {
             waScaleManager,
         );
 
+        this.initWorld3d();
+
         biggestAvailableAreaStore.recompute();
         if (ENABLE_MAP_EDITOR) {
             this.mapEditorModeManager = new MapEditorModeManager(this);
@@ -1212,6 +1216,8 @@ export class GameScene extends DirtyScene {
         this.shouldPublishScreenShareUnsubscriber?.();
         this.pinchManager?.destroy();
         this.emoteManager?.destroy();
+        this.world3dController?.destroy();
+        this.world3dController = undefined;
         this.cameraManager?.destroy();
         this.mapEditorModeManager?.destroy();
         this.gameMapPropertiesListener?.destroy();
@@ -1797,6 +1803,31 @@ export class GameScene extends DirtyScene {
 
     public getPlayerVariablesManager(): PlayerVariablesManager | undefined {
         return this.playerVariablesManager;
+    }
+
+    public getWorld3dController(): World3dController | undefined {
+        return this.world3dController;
+    }
+
+    /**
+     * Starts the 3D view of the world. Phaser keeps running the game: the 3D view only displays it.
+     */
+    private initWorld3d(): void {
+        this.world3dController?.destroy();
+        try {
+            const controller = new World3dController(this);
+            if (!controller.isAvailable) {
+                return;
+            }
+            this.world3dController = controller;
+            // The player variables manager only exists once the room is joined
+            if (this.playerVariablesManager !== undefined) {
+                controller.onConnected();
+            }
+        } catch (e) {
+            console.error("Could not initialize the 3D view", e);
+            Sentry.captureException(e);
+        }
     }
 
     public getActivatablesManager(): ActivatablesManager {
@@ -2412,6 +2443,7 @@ export class GameScene extends DirtyScene {
             this._room.id,
             this._room.group ?? undefined,
         );
+        this.world3dController?.onConnected();
 
         if (this._spaceRegistry === undefined) {
             throw new Error("Space registry is undefined when joining room");
@@ -3495,6 +3527,8 @@ ${escapedMessage}
                             );
                             this.gameMapPropertiesListener.register();
                             this.configureTileAnimations();
+                            // The 3D view is bound to the previous map wrapper
+                            this.initWorld3d();
                             resolve(newFirstgid);
                         });
                         this.load.off("loaderror", errorHandler);

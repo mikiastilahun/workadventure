@@ -59,6 +59,7 @@ services:
       JITSI_URL: $JITSI_URL
       JITSI_PRIVATE_MODE: "$JITSI_PRIVATE_MODE"
       ENABLE_MAP_EDITOR: "$ENABLE_MAP_EDITOR"
+      DEFAULT_VIEW_MODE: "${DEFAULT_VIEW_MODE:-2d}"
       HOST: "0.0.0.0"
       NODE_ENV: development
       ALLOWED_CORS_ORIGIN: "http://play.workadventure.localhost"

@@ -43,6 +43,7 @@ if (typeof window !== "undefined" && window.env === undefined) {
         JITSI_URL: undefined,
         JITSI_PRIVATE_MODE: false,
         ENABLE_MAP_EDITOR: true,
+        DEFAULT_VIEW_MODE: "2d",
         PUBLIC_MAP_STORAGE_PREFIX: undefined,
         MAX_USERNAME_LENGTH: 20,
         MAX_PER_GROUP: 4,

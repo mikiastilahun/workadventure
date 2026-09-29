@@ -106,9 +106,10 @@ describe("MediaPipeTasksVisionWorkerTransformer", () => {
         vi.stubGlobal("createImageBitmap", vi.fn());
         vi.stubGlobal("MediaStreamTrackProcessor", undefined);
         vi.stubGlobal("MediaStreamTrackGenerator", undefined);
+        // Typed from getContext itself: the overloads differ when the WebGPU types are loaded (Three.js)
         vi.spyOn(HTMLCanvasElement.prototype, "getContext").mockReturnValue({
             getExtension: () => null,
-        } as unknown as WebGL2RenderingContext);
+        } as unknown as ReturnType<HTMLCanvasElement["getContext"]>);
         vi.spyOn(console, "info").mockImplementation(() => undefined);
         vi.spyOn(console, "error").mockImplementation(() => undefined);
     });

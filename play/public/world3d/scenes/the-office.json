@@ -1,0 +1,1182 @@
+{
+ "version": 1,
+ "hideLayers": [
+  "background/furnitures"
+ ],
+ "floorPatches": [
+  {
+   "from": [
+    11,
+    0,
+    3,
+    5.4
+   ],
+   "to": [
+    8,
+    0,
+    3,
+    5.4
+   ]
+  },
+  {
+   "from": [
+    11,
+    0,
+    3,
+    5.4
+   ],
+   "to": [
+    14,
+    0,
+    3,
+    5.4
+   ]
+  },
+  {
+   "from": [
+    11,
+    0,
+    3,
+    5.4
+   ],
+   "to": [
+    17,
+    0,
+    3,
+    5.4
+   ]
+  },
+  {
+   "from": [
+    11,
+    0,
+    3,
+    5.4
+   ],
+   "to": [
+    26,
+    0,
+    3,
+    5.4
+   ]
+  },
+  {
+   "from": [
+    11,
+    0,
+    3,
+    5.4
+   ],
+   "to": [
+    29,
+    0,
+    3,
+    5.4
+   ]
+  },
+  {
+   "from": [
+    41,
+    0,
+    3,
+    5.4
+   ],
+   "to": [
+    35,
+    0,
+    3,
+    5.4
+   ]
+  },
+  {
+   "from": [
+    41,
+    0,
+    3,
+    5.4
+   ],
+   "to": [
+    38,
+    0,
+    3,
+    5.4
+   ]
+  },
+  {
+   "from": [
+    41,
+    0,
+    3,
+    5.4
+   ],
+   "to": [
+    47,
+    0,
+    3,
+    5.4
+   ]
+  },
+  {
+   "from": [
+    41,
+    0,
+    3,
+    5.4
+   ],
+   "to": [
+    50,
+    0,
+    3,
+    5.4
+   ]
+  },
+  {
+   "from": [
+    19,
+    35.6,
+    8,
+    4.4
+   ],
+   "to": [
+    10,
+    35.6,
+    8,
+    4.4
+   ]
+  },
+  {
+   "from": [
+    26,
+    35.6,
+    4,
+    4.4
+   ],
+   "to": [
+    30,
+    35.6,
+    4,
+    4.4
+   ]
+  },
+  {
+   "from": [
+    42,
+    35.6,
+    9,
+    4.4
+   ],
+   "to": [
+    51,
+    35.6,
+    9,
+    4.4
+   ]
+  }
+ ],
+ "objects": [
+  {
+   "model": "car_sedan",
+   "x": 9.5,
+   "y": 2.6,
+   "rotation": 0
+  },
+  {
+   "model": "car_suv",
+   "x": 15.2,
+   "y": 2.3,
+   "rotation": 0
+  },
+  {
+   "model": "car_suv_luxury",
+   "x": 19.1,
+   "y": 3.0,
+   "rotation": 180
+  },
+  {
+   "model": "car_sedan_sports",
+   "x": 29.0,
+   "y": 2.8,
+   "rotation": 270
+  },
+  {
+   "model": "van",
+   "x": 36.5,
+   "y": 2.7,
+   "rotation": 180
+  },
+  {
+   "model": "car_hatchback",
+   "x": 39.4,
+   "y": 2.7,
+   "rotation": 180
+  },
+  {
+   "model": "car_suv",
+   "x": 48.0,
+   "y": 2.3,
+   "rotation": 0
+  },
+  {
+   "model": "car_sedan",
+   "x": 51.4,
+   "y": 2.7,
+   "rotation": 0
+  },
+  {
+   "model": "trash_bin_outdoor",
+   "x": 2.9,
+   "y": 4.8,
+   "rotation": 0
+  },
+  {
+   "model": "trash_bin_outdoor",
+   "x": 54.9,
+   "y": 5.5,
+   "rotation": 0
+  },
+  {
+   "model": "trash_bin_outdoor",
+   "x": 55.9,
+   "y": 5.5,
+   "rotation": 0
+  },
+  {
+   "model": "cardboard_box",
+   "x": 5.4,
+   "y": 7.6,
+   "rotation": 0,
+   "scale": 1.6
+  },
+  {
+   "model": "cardboard_box",
+   "x": 5.4,
+   "y": 8.5,
+   "rotation": 0,
+   "scale": 1.6
+  },
+  {
+   "model": "cardboard_box",
+   "x": 6.5,
+   "y": 8.4,
+   "rotation": 0,
+   "scale": 1.6
+  },
+  {
+   "model": "cardboard_box",
+   "x": 6.6,
+   "y": 7.8,
+   "rotation": 0,
+   "scale": 1.6
+  },
+  {
+   "model": "fire_extinguisher",
+   "x": 8.5,
+   "y": 7.4,
+   "rotation": 0
+  },
+  {
+   "model": "plant_large",
+   "x": 15.5,
+   "y": 7.6,
+   "rotation": 0
+  },
+  {
+   "model": "office_chair",
+   "x": 17.6,
+   "y": 8.2,
+   "rotation": 0
+  },
+  {
+   "model": "office_desk",
+   "x": 17.6,
+   "y": 9.3,
+   "rotation": 180,
+   "width": 2.8,
+   "depth": 1.1
+  },
+  {
+   "model": "monitor",
+   "x": 17.8,
+   "y": 9.6,
+   "rotation": 180,
+   "elevation": 0.55
+  },
+  {
+   "model": "keyboard",
+   "x": 17.8,
+   "y": 9.0,
+   "rotation": 180,
+   "elevation": 0.55
+  },
+  {
+   "model": "drawers",
+   "x": 20.1,
+   "y": 7.7,
+   "rotation": 0
+  },
+  {
+   "model": "laptop",
+   "x": 20.1,
+   "y": 7.7,
+   "rotation": 0,
+   "elevation": 0.43
+  },
+  {
+   "model": "plant_small",
+   "x": 18.9,
+   "y": 9.6,
+   "rotation": 0,
+   "elevation": 0.55
+  },
+  {
+   "model": "plant",
+   "x": 13.5,
+   "y": 10.8,
+   "rotation": 0
+  },
+  {
+   "model": "armchair",
+   "x": 14.9,
+   "y": 13.8,
+   "rotation": 0
+  },
+  {
+   "model": "plant",
+   "x": 19.0,
+   "y": 13.8,
+   "rotation": 0
+  },
+  {
+   "model": "water_cooler",
+   "x": 22.5,
+   "y": 13.8,
+   "rotation": 0
+  },
+  {
+   "model": "sofa",
+   "x": 11.4,
+   "y": 15.8,
+   "rotation": 270
+  },
+  {
+   "model": "office_desk",
+   "x": 13.6,
+   "y": 18.3,
+   "rotation": 0,
+   "width": 3.0,
+   "depth": 1.1
+  },
+  {
+   "model": "plant_small",
+   "x": 11.2,
+   "y": 18.7,
+   "rotation": 0
+  },
+  {
+   "model": "laptop",
+   "x": 13.4,
+   "y": 18.2,
+   "rotation": 0,
+   "elevation": 0.55
+  },
+  {
+   "model": "table",
+   "x": 26.0,
+   "y": 10.4,
+   "rotation": 0,
+   "width": 4.2,
+   "depth": 1.3
+  },
+  {
+   "model": "office_chair",
+   "x": 24.6,
+   "y": 9.2,
+   "rotation": 0
+  },
+  {
+   "model": "office_chair",
+   "x": 24.6,
+   "y": 11.6,
+   "rotation": 180
+  },
+  {
+   "model": "office_chair",
+   "x": 25.6,
+   "y": 9.2,
+   "rotation": 0
+  },
+  {
+   "model": "office_chair",
+   "x": 25.6,
+   "y": 11.6,
+   "rotation": 180
+  },
+  {
+   "model": "office_chair",
+   "x": 26.5,
+   "y": 9.2,
+   "rotation": 0
+  },
+  {
+   "model": "office_chair",
+   "x": 26.5,
+   "y": 11.6,
+   "rotation": 180
+  },
+  {
+   "model": "office_chair",
+   "x": 27.5,
+   "y": 9.2,
+   "rotation": 0
+  },
+  {
+   "model": "office_chair",
+   "x": 27.5,
+   "y": 11.6,
+   "rotation": 180
+  },
+  {
+   "model": "office_chair",
+   "x": 23.3,
+   "y": 10.3,
+   "rotation": 270
+  },
+  {
+   "model": "office_chair",
+   "x": 28.7,
+   "y": 10.3,
+   "rotation": 90
+  },
+  {
+   "model": "projector_screen",
+   "x": 25.9,
+   "y": 6.8,
+   "rotation": 0
+  },
+  {
+   "model": "whiteboard",
+   "x": 29.5,
+   "y": 6.9,
+   "rotation": 0,
+   "width": 1.5,
+   "depth": 0.4
+  },
+  {
+   "model": "drawers",
+   "x": 26.0,
+   "y": 13.6,
+   "rotation": 0,
+   "width": 4.0,
+   "depth": 0.6
+  },
+  {
+   "model": "office_desk",
+   "x": 18.5,
+   "y": 18.3,
+   "rotation": 90,
+   "width": 2.4,
+   "depth": 1.0
+  },
+  {
+   "model": "office_desk",
+   "x": 19.55,
+   "y": 18.3,
+   "rotation": 270,
+   "width": 2.4,
+   "depth": 1.0
+  },
+  {
+   "model": "monitor",
+   "x": 18.8,
+   "y": 18.3,
+   "rotation": 90,
+   "elevation": 0.55
+  },
+  {
+   "model": "monitor",
+   "x": 19.25,
+   "y": 18.3,
+   "rotation": 270,
+   "elevation": 0.55
+  },
+  {
+   "model": "keyboard",
+   "x": 18.3,
+   "y": 18.3,
+   "rotation": 90,
+   "elevation": 0.55
+  },
+  {
+   "model": "keyboard",
+   "x": 19.75,
+   "y": 18.3,
+   "rotation": 270,
+   "elevation": 0.55
+  },
+  {
+   "model": "office_chair",
+   "x": 17.3,
+   "y": 18.5,
+   "rotation": 270
+  },
+  {
+   "model": "office_chair",
+   "x": 20.7,
+   "y": 18.3,
+   "rotation": 90
+  },
+  {
+   "model": "office_chair",
+   "x": 18.8,
+   "y": 16.1,
+   "rotation": 0
+  },
+  {
+   "model": "office_desk",
+   "x": 24.55,
+   "y": 18.3,
+   "rotation": 90,
+   "width": 2.4,
+   "depth": 1.0
+  },
+  {
+   "model": "office_desk",
+   "x": 25.6,
+   "y": 18.3,
+   "rotation": 270,
+   "width": 2.4,
+   "depth": 1.0
+  },
+  {
+   "model": "monitor",
+   "x": 24.85,
+   "y": 18.3,
+   "rotation": 90,
+   "elevation": 0.55
+  },
+  {
+   "model": "monitor",
+   "x": 25.3,
+   "y": 18.3,
+   "rotation": 270,
+   "elevation": 0.55
+  },
+  {
+   "model": "keyboard",
+   "x": 24.35,
+   "y": 18.3,
+   "rotation": 90,
+   "elevation": 0.55
+  },
+  {
+   "model": "keyboard",
+   "x": 25.8,
+   "y": 18.3,
+   "rotation": 270,
+   "elevation": 0.55
+  },
+  {
+   "model": "office_chair",
+   "x": 23.3,
+   "y": 18.5,
+   "rotation": 270
+  },
+  {
+   "model": "office_chair",
+   "x": 26.8,
+   "y": 18.8,
+   "rotation": 90
+  },
+  {
+   "model": "office_chair",
+   "x": 24.8,
+   "y": 16.1,
+   "rotation": 0
+  },
+  {
+   "model": "office_desk",
+   "x": 20.55,
+   "y": 26.7,
+   "rotation": 90,
+   "width": 2.4,
+   "depth": 1.0
+  },
+  {
+   "model": "office_desk",
+   "x": 21.6,
+   "y": 26.7,
+   "rotation": 270,
+   "width": 2.4,
+   "depth": 1.0
+  },
+  {
+   "model": "monitor",
+   "x": 20.85,
+   "y": 26.7,
+   "rotation": 90,
+   "elevation": 0.55
+  },
+  {
+   "model": "monitor",
+   "x": 21.3,
+   "y": 26.7,
+   "rotation": 270,
+   "elevation": 0.55
+  },
+  {
+   "model": "keyboard",
+   "x": 20.35,
+   "y": 26.7,
+   "rotation": 90,
+   "elevation": 0.55
+  },
+  {
+   "model": "keyboard",
+   "x": 21.8,
+   "y": 26.7,
+   "rotation": 270,
+   "elevation": 0.55
+  },
+  {
+   "model": "office_chair",
+   "x": 19.4,
+   "y": 26.3,
+   "rotation": 270
+  },
+  {
+   "model": "office_chair",
+   "x": 22.7,
+   "y": 27.4,
+   "rotation": 90
+  },
+  {
+   "model": "plant_small",
+   "x": 20.7,
+   "y": 25.9,
+   "rotation": 0,
+   "elevation": 0.55
+  },
+  {
+   "model": "bookcase",
+   "x": 12.6,
+   "y": 21.7,
+   "rotation": 0,
+   "width": 3.0,
+   "depth": 0.5
+  },
+  {
+   "model": "office_desk",
+   "x": 14.5,
+   "y": 24.95,
+   "rotation": 180,
+   "width": 2.8,
+   "depth": 1.0
+  },
+  {
+   "model": "office_desk",
+   "x": 14.5,
+   "y": 26.0,
+   "rotation": 0,
+   "width": 2.8,
+   "depth": 1.0
+  },
+  {
+   "model": "monitor",
+   "x": 14.3,
+   "y": 25.3,
+   "rotation": 180,
+   "elevation": 0.55
+  },
+  {
+   "model": "monitor",
+   "x": 14.8,
+   "y": 25.65,
+   "rotation": 0,
+   "elevation": 0.55
+  },
+  {
+   "model": "keyboard",
+   "x": 14.3,
+   "y": 24.7,
+   "rotation": 180,
+   "elevation": 0.55
+  },
+  {
+   "model": "keyboard",
+   "x": 14.8,
+   "y": 26.25,
+   "rotation": 0,
+   "elevation": 0.55
+  },
+  {
+   "model": "office_chair",
+   "x": 14.6,
+   "y": 23.9,
+   "rotation": 0
+  },
+  {
+   "model": "office_chair",
+   "x": 14.6,
+   "y": 27.3,
+   "rotation": 180
+  },
+  {
+   "model": "office_chair",
+   "x": 16.6,
+   "y": 25.6,
+   "rotation": 90
+  },
+  {
+   "model": "plant_large",
+   "x": 26.5,
+   "y": 23.3,
+   "rotation": 0
+  },
+  {
+   "model": "office_desk",
+   "x": 27.8,
+   "y": 25.4,
+   "rotation": 0,
+   "width": 2.0,
+   "depth": 1.0
+  },
+  {
+   "model": "monitor",
+   "x": 27.7,
+   "y": 25.1,
+   "rotation": 0,
+   "elevation": 0.55
+  },
+  {
+   "model": "keyboard",
+   "x": 27.7,
+   "y": 25.7,
+   "rotation": 0,
+   "elevation": 0.55
+  },
+  {
+   "model": "office_chair",
+   "x": 27.6,
+   "y": 26.5,
+   "rotation": 180
+  },
+  {
+   "model": "drawers",
+   "x": 29.4,
+   "y": 24.0,
+   "rotation": 0
+  },
+  {
+   "model": "armchair",
+   "x": 47.4,
+   "y": 8.1,
+   "rotation": 270
+  },
+  {
+   "model": "armchair",
+   "x": 47.4,
+   "y": 9.2,
+   "rotation": 270
+  },
+  {
+   "model": "vending_machine",
+   "x": 50.2,
+   "y": 8.0,
+   "rotation": 0,
+   "width": 1.6,
+   "depth": 1.0
+  },
+  {
+   "model": "vending_machine",
+   "x": 51.9,
+   "y": 8.0,
+   "rotation": 0,
+   "width": 1.6,
+   "depth": 1.0
+  },
+  {
+   "model": "vending_machine",
+   "x": 53.7,
+   "y": 8.0,
+   "rotation": 0,
+   "width": 1.6,
+   "depth": 1.0
+  },
+  {
+   "model": "vending_machine",
+   "x": 55.2,
+   "y": 8.1,
+   "rotation": 0,
+   "width": 0.8,
+   "depth": 0.8
+  },
+  {
+   "model": "table_round",
+   "x": 53.8,
+   "y": 11.7,
+   "rotation": 0
+  },
+  {
+   "model": "chair",
+   "x": 52.6,
+   "y": 11.7,
+   "rotation": 270
+  },
+  {
+   "model": "chair",
+   "x": 55.0,
+   "y": 11.7,
+   "rotation": 90
+  },
+  {
+   "model": "chair",
+   "x": 53.8,
+   "y": 10.6,
+   "rotation": 0
+  },
+  {
+   "model": "vending_machine",
+   "x": 54.6,
+   "y": 15.1,
+   "rotation": 90,
+   "width": 1.0,
+   "depth": 0.8
+  },
+  {
+   "model": "kitchen_cabinet",
+   "x": 31.9,
+   "y": 17.1,
+   "rotation": 0,
+   "width": 2.0,
+   "depth": 0.9
+  },
+  {
+   "model": "kitchen_sink",
+   "x": 33.4,
+   "y": 17.1,
+   "rotation": 0
+  },
+  {
+   "model": "kitchen_cabinet",
+   "x": 34.5,
+   "y": 17.1,
+   "rotation": 0,
+   "width": 1.0,
+   "depth": 0.9
+  },
+  {
+   "model": "coffee_machine",
+   "x": 31.4,
+   "y": 16.95,
+   "rotation": 0,
+   "elevation": 0.65
+  },
+  {
+   "model": "microwave",
+   "x": 34.5,
+   "y": 16.95,
+   "rotation": 0,
+   "elevation": 0.65
+  },
+  {
+   "model": "fridge",
+   "x": 35.8,
+   "y": 16.9,
+   "rotation": 0
+  },
+  {
+   "model": "shelves",
+   "x": 49.1,
+   "y": 17.9,
+   "rotation": 0,
+   "width": 1.6,
+   "depth": 0.6
+  },
+  {
+   "model": "filing_cabinet",
+   "x": 51.5,
+   "y": 17.6,
+   "rotation": 0,
+   "width": 1.0,
+   "depth": 0.5
+  },
+  {
+   "model": "office_desk",
+   "x": 53.6,
+   "y": 18.4,
+   "rotation": 0,
+   "width": 2.2,
+   "depth": 1.0
+  },
+  {
+   "model": "monitor",
+   "x": 53.5,
+   "y": 18.1,
+   "rotation": 0,
+   "elevation": 0.55
+  },
+  {
+   "model": "keyboard",
+   "x": 53.5,
+   "y": 18.65,
+   "rotation": 0,
+   "elevation": 0.55
+  },
+  {
+   "model": "office_chair",
+   "x": 53.5,
+   "y": 19.4,
+   "rotation": 180
+  },
+  {
+   "model": "office_desk",
+   "x": 49.1,
+   "y": 21.4,
+   "rotation": 90,
+   "width": 2.0,
+   "depth": 1.0
+  },
+  {
+   "model": "monitor",
+   "x": 49.4,
+   "y": 21.4,
+   "rotation": 90,
+   "elevation": 0.55
+  },
+  {
+   "model": "office_chair",
+   "x": 47.8,
+   "y": 21.4,
+   "rotation": 270
+  },
+  {
+   "model": "office_desk",
+   "x": 54.2,
+   "y": 22.5,
+   "rotation": 90,
+   "width": 2.6,
+   "depth": 1.1
+  },
+  {
+   "model": "laptop",
+   "x": 54.0,
+   "y": 22.4,
+   "rotation": 90,
+   "elevation": 0.55
+  },
+  {
+   "model": "office_chair",
+   "x": 52.6,
+   "y": 22.3,
+   "rotation": 270
+  },
+  {
+   "model": "shelves",
+   "x": 49.2,
+   "y": 25.1,
+   "rotation": 0,
+   "width": 1.8,
+   "depth": 0.6
+  },
+  {
+   "model": "table",
+   "x": 53.0,
+   "y": 25.4,
+   "rotation": 0,
+   "width": 3.8,
+   "depth": 1.0
+  },
+  {
+   "model": "office_chair",
+   "x": 53.4,
+   "y": 26.3,
+   "rotation": 180
+  },
+  {
+   "model": "table",
+   "x": 53.2,
+   "y": 28.1,
+   "rotation": 180,
+   "width": 3.6,
+   "depth": 1.0
+  },
+  {
+   "model": "office_chair",
+   "x": 52.2,
+   "y": 27.0,
+   "rotation": 0
+  },
+  {
+   "model": "monitor",
+   "x": 53.4,
+   "y": 28.3,
+   "rotation": 180,
+   "elevation": 0.54
+  },
+  {
+   "model": "plant_small",
+   "x": 54.9,
+   "y": 28.0,
+   "rotation": 0,
+   "elevation": 0.54
+  },
+  {
+   "model": "bathroom_sink",
+   "x": 32.3,
+   "y": 22.2,
+   "rotation": 0
+  },
+  {
+   "model": "bathroom_sink",
+   "x": 43.2,
+   "y": 22.2,
+   "rotation": 0
+  },
+  {
+   "model": "trash_can",
+   "x": 33.7,
+   "y": 22.8,
+   "rotation": 0
+  },
+  {
+   "model": "trash_can",
+   "x": 40.7,
+   "y": 22.8,
+   "rotation": 0
+  },
+  {
+   "model": "toilet",
+   "x": 35.0,
+   "y": 25.0,
+   "rotation": 0
+  },
+  {
+   "model": "toilet",
+   "x": 36.3,
+   "y": 25.0,
+   "rotation": 0
+  },
+  {
+   "model": "toilet",
+   "x": 38.3,
+   "y": 25.0,
+   "rotation": 0
+  },
+  {
+   "model": "toilet",
+   "x": 39.5,
+   "y": 25.0,
+   "rotation": 0
+  },
+  {
+   "model": "plant_small",
+   "x": 41.4,
+   "y": 25.1,
+   "rotation": 0
+  },
+  {
+   "model": "air_conditioner",
+   "x": 55.3,
+   "y": 31.7,
+   "rotation": 0
+  },
+  {
+   "model": "cardboard_box",
+   "x": 17.4,
+   "y": 33.6,
+   "rotation": 0,
+   "scale": 1.8
+  },
+  {
+   "model": "cardboard_box",
+   "x": 22.1,
+   "y": 34.4,
+   "rotation": 0,
+   "scale": 1.8
+  },
+  {
+   "model": "cardboard_box",
+   "x": 29.6,
+   "y": 33.5,
+   "rotation": 0,
+   "scale": 1.8
+  },
+  {
+   "model": "cardboard_box",
+   "x": 42.3,
+   "y": 34.5,
+   "rotation": 0,
+   "scale": 1.8
+  },
+  {
+   "model": "cardboard_box",
+   "x": 43.8,
+   "y": 34.5,
+   "rotation": 0,
+   "scale": 1.8
+  },
+  {
+   "model": "cardboard_box",
+   "x": 45.5,
+   "y": 33.8,
+   "rotation": 0,
+   "scale": 1.8
+  },
+  {
+   "model": "cardboard_box",
+   "x": 46.2,
+   "y": 33.2,
+   "rotation": 0,
+   "scale": 1.8
+  },
+  {
+   "model": "cardboard_box",
+   "x": 51.6,
+   "y": 34.0,
+   "rotation": 0,
+   "scale": 1.8
+  },
+  {
+   "model": "cardboard_box",
+   "x": 52.6,
+   "y": 33.4,
+   "rotation": 0,
+   "scale": 1.8
+  },
+  {
+   "model": "cardboard_box",
+   "x": 54.5,
+   "y": 34.5,
+   "rotation": 0,
+   "scale": 1.8
+  },
+  {
+   "model": "cardboard_box",
+   "x": 55.2,
+   "y": 34.4,
+   "rotation": 0,
+   "scale": 1.8
+  },
+  {
+   "model": "delivery_truck",
+   "x": 14.0,
+   "y": 36.8,
+   "rotation": 90,
+   "scale": 1.5
+  },
+  {
+   "model": "delivery_truck",
+   "x": 31.9,
+   "y": 36.0,
+   "rotation": 0,
+   "scale": 1.5
+  },
+  {
+   "model": "delivery_truck",
+   "x": 55.2,
+   "y": 36.8,
+   "rotation": 270,
+   "scale": 1.5
+  }
+ ]
+}

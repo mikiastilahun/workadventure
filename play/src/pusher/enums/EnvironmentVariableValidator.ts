@@ -410,6 +410,14 @@ export const EnvironmentVariables = z.object({
         .describe("Port for the Room API gRPC server. Defaults to 50051"),
     ROOM_API_SECRET_KEY: z.string().optional().describe("Secret key for Room API authentication"),
 
+    DEFAULT_VIEW_MODE: z
+        .enum(["2d", "3d"])
+        .optional()
+        .transform((val) => val ?? "2d")
+        .describe(
+            'The way the world is displayed by default: "3d" (3D world with 3D avatars) or "2d" (classic top-down view). Users can switch from one to the other. Defaults to "2d"',
+        ),
+
     // Map editor related environment variables
     ENABLE_MAP_EDITOR: BoolAsString.optional()
         .transform((val) => toBool(val, false))

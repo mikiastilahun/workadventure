@@ -28,6 +28,7 @@ import messageScreen from "./messageScreen";
 import refreshPrompt from "./refreshPrompt";
 import randomNames from "./randomNames";
 import onboarding from "./onboarding";
+import world3d from "./world3d";
 import recording from "./recording";
 
 const hsb_DE = deepmerge(en_US, {
@@ -59,6 +60,7 @@ const hsb_DE = deepmerge(en_US, {
     refreshPrompt,
     randomNames,
     onboarding,
+    world3d,
     recording,
 });
 

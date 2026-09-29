@@ -28,9 +28,11 @@ import locate from "./locate";
 import messageScreen from "./messageScreen";
 import randomNames from "./randomNames";
 import onboarding from "./onboarding";
+import world3d from "./world3d";
 import recording from "./recording";
 
 const fr_FR = deepmerge(en_US, {
+    world3d,
     area,
     audio,
     camera,
