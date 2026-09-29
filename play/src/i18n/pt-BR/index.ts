@@ -28,6 +28,7 @@ import say from "./say";
 import locate from "./locate";
 import randomNames from "./randomNames";
 import onboarding from "./onboarding";
+import world3d from "./world3d";
 import recording from "./recording";
 
 const pt_BR = deepmerge(en_US, {
@@ -59,6 +60,7 @@ const pt_BR = deepmerge(en_US, {
     locate,
     randomNames,
     onboarding,
+    world3d,
     recording,
 });
 

@@ -4,6 +4,7 @@ import type { ITiledMap, ITiledMapLayer } from "@workadventure/tiled-map-type-gu
 
 import type { PositionInterface } from "../../Connection/ConnexionModels";
 import { localUserStore } from "../../Connection/LocalUserStore";
+import { PathTileType } from "../../Utils/PathfindingManager";
 import type { GameMapFrontWrapper } from "./GameMap/GameMapFrontWrapper";
 
 const DEFAULT_START_NAME = "start";
@@ -25,7 +26,8 @@ export function computeStartPosition(
     // From the most to the least specific. Most of them draw a random position, hence the functions.
     const candidates: (() => PositionInterface | undefined)[] = [];
     if (initPosition !== undefined) {
-        candidates.push(() => initPosition);
+        // Never start inside a wall
+        candidates.push(() => snapToWalkable(gameMapFrontWrapper, initPosition));
     }
     if (startPositionName) {
         candidates.push(
@@ -71,11 +73,21 @@ export function computeStartPosition(
 
     // Still no start position? Something is wrong with the map, we need a "start" layer.
     console.warn('This map is missing a layer named "start" that contains the available default start positions.');
-    // Let's start in the middle of the map
-    return {
+    // Let's start in the middle of the map, but never inside a wall
+    return snapToWalkable(gameMapFrontWrapper, {
         x: (mapFile.width ?? 0) * 16,
         y: (mapFile.height ?? 0) * 16,
-    };
+    });
+}
+
+function snapToWalkable(gameMapFrontWrapper: GameMapFrontWrapper, position: PositionInterface): PositionInterface {
+    const tileDimensions = gameMapFrontWrapper.getTileDimensions();
+    return nearestWalkablePosition(
+        position,
+        gameMapFrontWrapper.getCollisionGrid(),
+        tileDimensions.width,
+        tileDimensions.height,
+    );
 }
 
 function getStartPositionFromPersonalArea(gameMapFrontWrapper: GameMapFrontWrapper): PositionInterface | undefined {
@@ -91,6 +103,55 @@ function getStartPositionFromPersonalArea(gameMapFrontWrapper: GameMapFrontWrapp
         x: personalArea.x + personalArea.width * 0.5,
         y: personalArea.y + personalArea.height * 0.5,
     };
+}
+
+/**
+ * Returns the position itself if it is on a walkable tile, else the center of the closest walkable tile (searching
+ * up to `maxDistance` tiles away). Positions are in game pixels.
+ */
+export function nearestWalkablePosition(
+    position: PositionInterface,
+    collisionGrid: readonly (readonly number[])[],
+    tileWidth: number,
+    tileHeight: number,
+    maxDistance = 30,
+): PositionInterface {
+    const height = collisionGrid.length;
+    const width = collisionGrid[0]?.length ?? 0;
+    const isWalkable = (x: number, y: number) =>
+        x >= 0 && y >= 0 && x < width && y < height && collisionGrid[y]?.[x] !== PathTileType.Collider;
+    const startX = Math.floor(position.x / tileWidth);
+    const startY = Math.floor(position.y / tileHeight);
+    if (width === 0 || isWalkable(startX, startY)) {
+        return position;
+    }
+    // Breadth-first search: the closest walkable tile in number of steps
+    const visited = new Set<number>([startY * width + startX]);
+    let frontier: [number, number][] = [[startX, startY]];
+    for (let distance = 1; distance <= maxDistance && frontier.length > 0; distance++) {
+        const next: [number, number][] = [];
+        for (const [x, y] of frontier) {
+            for (const [dx, dy] of [
+                [1, 0],
+                [-1, 0],
+                [0, 1],
+                [0, -1],
+            ] as const) {
+                const nx = x + dx;
+                const ny = y + dy;
+                if (nx < 0 || ny < 0 || nx >= width || ny >= height || visited.has(ny * width + nx)) {
+                    continue;
+                }
+                if (isWalkable(nx, ny)) {
+                    return { x: nx * tileWidth + tileWidth / 2, y: ny * tileHeight + tileHeight / 2 };
+                }
+                visited.add(ny * width + nx);
+                next.push([nx, ny]);
+            }
+        }
+        frontier = next;
+    }
+    return position;
 }
 
 function getStartPositionFromTiledArea(

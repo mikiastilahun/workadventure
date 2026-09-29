@@ -1,0 +1,11 @@
+{
+    "scenes": [
+        {
+            "maps": [
+                "workadventure.github.io/the-office-map/the-office.tmj",
+                "/the-office/the-office.tmj"
+            ],
+            "scene": "the-office.json"
+        }
+    ]
+}

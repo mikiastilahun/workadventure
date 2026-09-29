@@ -18,6 +18,8 @@ import { isPopupJustClosed } from "../Game/Say/SayManager";
 import LL from "../../../i18n/i18n-svelte";
 import { followRoleStore, followStateStore, followUsersStore } from "../../Stores/FollowStore";
 import { localUserStore } from "../../Connection/LocalUserStore";
+import type { World3dPointerHandler } from "../../World3d/World3dState";
+import { world3dState } from "../../World3d/World3dState";
 import type { Shortcut } from "./UserInputManager";
 
 import Pointer = Phaser.Input.Pointer;
@@ -112,6 +114,10 @@ export class GameSceneUserInputHandler implements UserInputHandlerInterface {
     }
 
     public handlePointerUpEvent(pointer: Pointer, gameObjects: GameObject[]): void {
+        if (world3dState.active && world3dState.pointerHandler) {
+            this.handlePointerUpEventIn3d(pointer, world3dState.pointerHandler);
+            return;
+        }
         if (pointer.wasTouch || pointer.leftButtonReleased()) {
             for (const object of gameObjects) {
                 if (isActivatable(object)) {
@@ -155,6 +161,34 @@ export class GameSceneUserInputHandler implements UserInputHandlerInterface {
             .catch((reason) => {
                 console.warn(reason);
             });
+    }
+
+    /**
+     * In the 3D view, Phaser does not know what is under the pointer: the 3D view does the picking (players,
+     * entities, ground). Left click (or tap) walks to the clicked point or interacts with the clicked object.
+     */
+    private handlePointerUpEventIn3d(pointer: Pointer, pointerHandler: World3dPointerHandler): void {
+        if (pointer.wasTouch && pointer.getDuration() > 250) {
+            return;
+        }
+        if (!pointer.wasTouch && !pointer.leftButtonReleased() && !pointer.rightButtonReleased()) {
+            return;
+        }
+        if (
+            !this.gameScene.userInputManager.isControlsEnabled ||
+            !this.gameScene.userInputManager.isRightClickEnabled
+        ) {
+            return;
+        }
+        const event = pointer.event;
+        if (event instanceof MouseEvent) {
+            pointerHandler.handleClick(event.clientX, event.clientY);
+            return;
+        }
+        const touch = event.changedTouches[0];
+        if (touch) {
+            pointerHandler.handleClick(touch.clientX, touch.clientY);
+        }
     }
 
     public handlePointerDownEvent(pointer: Pointer, gameObjects: GameObject[]): void {}

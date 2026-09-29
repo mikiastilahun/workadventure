@@ -28,8 +28,10 @@ import recording from "./recording";
 import locate from "./locate";
 import randomNames from "./randomNames";
 import onboarding from "./onboarding";
+import world3d from "./world3d";
 
 const en_US: BaseTranslation = {
+    world3d,
     area,
     audio,
     camera,

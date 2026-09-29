@@ -8,6 +8,8 @@ import type { UserInputHandlerInterface } from "../../Interfaces/UserInputHandle
 import { mapEditorModeStore } from "../../Stores/MapEditorStore";
 import LL from "../../../i18n/i18n-svelte";
 
+import { world3dState } from "../../World3d/World3dState";
+import { remapInputToCamera } from "../../World3d/Input/MovementRemap";
 import Key = Phaser.Input.Keyboard.Key;
 import Pointer = Phaser.Input.Pointer;
 import GameObject = Phaser.GameObjects.GameObject;
@@ -326,6 +328,23 @@ export class UserInputManager {
                 eventsMap.set(d.event, true);
             }
         });
+        if (world3dState.active) {
+            // In 3D, the arrow keys move the player relatively to the camera, like in 3D games
+            const remapped = remapInputToCamera(
+                {
+                    up: eventsMap.get(UserInputEvent.MoveUp),
+                    right: eventsMap.get(UserInputEvent.MoveRight),
+                    down: eventsMap.get(UserInputEvent.MoveDown),
+                    left: eventsMap.get(UserInputEvent.MoveLeft),
+                },
+                world3dState.cameraForwardX,
+                world3dState.cameraForwardY,
+            );
+            eventsMap.set(UserInputEvent.MoveUp, remapped.up);
+            eventsMap.set(UserInputEvent.MoveRight, remapped.right);
+            eventsMap.set(UserInputEvent.MoveDown, remapped.down);
+            eventsMap.set(UserInputEvent.MoveLeft, remapped.left);
+        }
         return eventsMap;
     }
 

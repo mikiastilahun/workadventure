@@ -59,6 +59,7 @@ services:
       JITSI_URL: $JITSI_URL
       JITSI_PRIVATE_MODE: "$JITSI_PRIVATE_MODE"
       ENABLE_MAP_EDITOR: "$ENABLE_MAP_EDITOR"
+      DEFAULT_VIEW_MODE: "${DEFAULT_VIEW_MODE:-2d}"
       HOST: "0.0.0.0"
       NODE_ENV: development
       # Same as play/Dockerfile: the auth token sent in Sec-WebSocket-Protocol can exceed uWebSockets' 4 KB default

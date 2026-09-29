@@ -1,5 +1,9 @@
 <script lang="ts">
     import { onDestroy, onMount } from "svelte";
+    import { avatarEditorVisibleStore } from "../../World3d/Stores/AvatarStore";
+    import { preferredViewModeStore } from "../../World3d/Stores/ViewModeStore";
+    import { IconShirt } from "../Icons";
+    import { LL } from "../../../i18n/i18n-svelte";
     import { SelectCharacterSceneName } from "../../Phaser/Login/SelectCharacterScene";
     import { areCharacterTexturesValid } from "../../Connection/LocalUserUtils";
     import { analyticsClient } from "../../Administration/AnalyticsClient";
@@ -68,6 +72,19 @@
     {:else}
         <WokaSelectScene customize={() => (buildOwnWoka = true)} {saveAndContinue} />
     {/if}
+{/if}
+
+{#if mounted && preferredViewModeStore.webglSupported}
+    <!-- The 3D avatar is customized here too, next to the Woka -->
+    <button
+        type="button"
+        class="fixed bottom-4 start-4 z-[300] flex items-center gap-2 rounded-xl bg-secondary px-4 py-3 text-sm font-bold text-white shadow-lg hover:bg-secondary-600"
+        data-testid="woka-scene-avatar3d"
+        onclick={() => avatarEditorVisibleStore.set(true)}
+    >
+        <IconShirt font-size="20" />
+        {$LL.world3d.hud.avatar()}
+    </button>
 {/if}
 
 {#if error}

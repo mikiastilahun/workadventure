@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { avatarEditorVisibleStore } from "../World3d/Stores/AvatarStore";
     import type { Game } from "../Phaser/Game/Game";
     import { errorStore } from "../Stores/ErrorStore";
     import { errorScreenStore } from "../Stores/ErrorScreenStore";
@@ -17,6 +18,8 @@
     import { showModalGlobalComminucationVisibilityStore } from "../Stores/ModalStore";
     import { draggingFile } from "../Stores/FileUploadStore";
     import ChatSidebar from "../Chat/ChatSidebar.svelte";
+    import AvatarEditor from "./World3d/AvatarEditor.svelte";
+    import World3dHud from "./World3d/World3dHud.svelte";
     import LoginScene from "./Login/LoginScene.svelte";
     import MainLayout from "./MainLayout.svelte";
     import SelectCompanionScene from "./SelectCompanion/SelectCompanionScene.svelte";
@@ -102,7 +105,11 @@
         <Onboarding />
 
         <MainLayout />
+        <World3dHud />
     {/key}
+    {#if $avatarEditorVisibleStore}
+        <AvatarEditor />
+    {/if}
     <MainModal />
 {/if}
 
