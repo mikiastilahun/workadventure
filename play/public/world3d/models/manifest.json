@@ -1,0 +1,481 @@
+{
+    "office_desk": {
+        "file": "office_desk.glb",
+        "height": 0.76,
+        "rotation": 0
+    },
+    "armchair": {
+        "file": "armchair.glb",
+        "height": 0.8,
+        "rotation": 0
+    },
+    "sofa": {
+        "file": "sofa.glb",
+        "height": 0.8,
+        "rotation": 0
+    },
+    "plant": {
+        "file": "plant.glb",
+        "height": 1,
+        "rotation": 0
+    },
+    "plant_large": {
+        "file": "plant_large.glb",
+        "height": 1.5,
+        "rotation": 0
+    },
+    "plant_small": {
+        "file": "plant_small.glb",
+        "height": 0.35,
+        "rotation": 0
+    },
+    "coffee_table": {
+        "file": "coffee_table.glb",
+        "height": 0.42,
+        "rotation": 0
+    },
+    "round_table": {
+        "file": "round_table.glb",
+        "height": 0.75,
+        "rotation": 0
+    },
+    "shelves": {
+        "file": "shelves.glb",
+        "height": 1.8,
+        "rotation": 0
+    },
+    "ceiling_light": {
+        "file": "ceiling_light.glb",
+        "height": 0.12,
+        "rotation": 0
+    },
+    "wall_clock": {
+        "file": "wall_clock.glb",
+        "height": 0.3,
+        "rotation": 0
+    },
+    "cardboard_box": {
+        "file": "cardboard_box.glb",
+        "height": 0.4,
+        "rotation": 0
+    },
+    "fire_extinguisher": {
+        "file": "fire_extinguisher.glb",
+        "height": 0.6,
+        "rotation": 0
+    },
+    "air_conditioner": {
+        "file": "air_conditioner.glb",
+        "height": 0.8,
+        "rotation": 0
+    },
+    "projector_screen": {
+        "file": "projector_screen.glb",
+        "height": 2,
+        "rotation": 0
+    },
+    "dining_table": {
+        "file": "dining_table.glb",
+        "height": 0.76,
+        "rotation": 0
+    },
+    "trash_bin_outdoor": {
+        "file": "trash_bin_outdoor.glb",
+        "height": 0.9,
+        "rotation": 0
+    },
+    "office_chair": {
+        "file": "office_chair.glb",
+        "height": 1.05,
+        "rotation": 0,
+        "materials": {
+            "carpet": {
+                "color": "#2d3036",
+                "roughness": 0.9
+            },
+            "metalMedium": {
+                "color": "#3a3f47",
+                "metalness": 0.6,
+                "roughness": 0.4
+            }
+        }
+    },
+    "chair": {
+        "file": "chair.glb",
+        "height": 0.85,
+        "rotation": 0,
+        "materials": {
+            "carpetBlue": {
+                "color": "#56687a",
+                "metalness": 0,
+                "roughness": 0.85
+            },
+            "metal": {
+                "color": "#c9ccd1",
+                "metalness": 0.8,
+                "roughness": 0.3
+            }
+        }
+    },
+    "monitor": {
+        "file": "monitor.glb",
+        "height": 0.45,
+        "rotation": 0,
+        "materials": {
+            "metalDark": {
+                "color": "#15181c",
+                "roughness": 0.3
+            },
+            "metal": {
+                "color": "#2a2e35",
+                "metalness": 0.4,
+                "roughness": 0.4
+            }
+        }
+    },
+    "keyboard": {
+        "file": "keyboard.glb",
+        "height": 0.03,
+        "rotation": 0,
+        "materials": {
+            "metalDark": {
+                "color": "#1e2126"
+            },
+            "metalMedium": {
+                "color": "#3a3f47"
+            }
+        }
+    },
+    "laptop": {
+        "file": "laptop.glb",
+        "height": 0.24,
+        "rotation": 0,
+        "materials": {
+            "metal": {
+                "color": "#a7adb5",
+                "metalness": 0.7,
+                "roughness": 0.35
+            },
+            "metalMedium": {
+                "color": "#8d949d",
+                "metalness": 0.7,
+                "roughness": 0.35
+            },
+            "metalDark": {
+                "color": "#15181c"
+            }
+        }
+    },
+    "fridge": {
+        "file": "fridge.glb",
+        "height": 1.85,
+        "rotation": 0,
+        "materials": {
+            "metalLight": {
+                "color": "#d9dde0",
+                "metalness": 0.6,
+                "roughness": 0.3
+            },
+            "metalMedium": {
+                "color": "#6f757d",
+                "metalness": 0.7,
+                "roughness": 0.3
+            }
+        }
+    },
+    "kitchen_cabinet": {
+        "file": "kitchen_cabinet.glb",
+        "height": 0.9,
+        "rotation": 0,
+        "materials": {
+            "wood": {
+                "color": "#f1f0ec",
+                "roughness": 0.5
+            },
+            "woodDark": {
+                "color": "#3b3f45",
+                "roughness": 0.4
+            },
+            "metal": {
+                "color": "#9aa0a8",
+                "metalness": 0.8,
+                "roughness": 0.3
+            }
+        }
+    },
+    "kitchen_sink": {
+        "file": "kitchen_sink.glb",
+        "height": 0.9,
+        "rotation": 0,
+        "materials": {
+            "wood": {
+                "color": "#f1f0ec",
+                "roughness": 0.5
+            },
+            "woodDark": {
+                "color": "#3b3f45",
+                "roughness": 0.4
+            },
+            "metal": {
+                "color": "#b8bec6",
+                "metalness": 0.9,
+                "roughness": 0.2
+            },
+            "metalLight": {
+                "color": "#cfd4d8",
+                "metalness": 0.9,
+                "roughness": 0.2
+            }
+        }
+    },
+    "coffee_machine": {
+        "file": "coffee_machine.glb",
+        "height": 0.4,
+        "rotation": 0,
+        "materials": {
+            "metalMedium": {
+                "color": "#2d3036",
+                "roughness": 0.4
+            },
+            "metal": {
+                "color": "#b8bec6",
+                "metalness": 0.9,
+                "roughness": 0.25
+            }
+        }
+    },
+    "microwave": {
+        "file": "microwave.glb",
+        "height": 0.3,
+        "rotation": 0,
+        "materials": {
+            "metalMedium": {
+                "color": "#2d3036",
+                "roughness": 0.4
+            },
+            "glass": {
+                "color": "#1c2a30",
+                "roughness": 0.1
+            }
+        }
+    },
+    "toilet": {
+        "file": "toilet.glb",
+        "height": 0.8,
+        "rotation": 0,
+        "materials": {
+            "carpetWhite": {
+                "color": "#f7f7f5",
+                "roughness": 0.15
+            },
+            "metalLight": {
+                "color": "#d7dce0",
+                "metalness": 0.9,
+                "roughness": 0.2
+            }
+        }
+    },
+    "bathroom_sink": {
+        "file": "bathroom_sink.glb",
+        "height": 0.9,
+        "rotation": 0,
+        "materials": {
+            "carpetWhite": {
+                "color": "#f7f7f5",
+                "roughness": 0.15
+            },
+            "metalLight": {
+                "color": "#d7dce0",
+                "metalness": 0.9,
+                "roughness": 0.2
+            }
+        }
+    },
+    "trash_can": {
+        "file": "trash_can.glb",
+        "height": 0.45,
+        "rotation": 0,
+        "materials": {
+            "metal": {
+                "color": "#4a4f57",
+                "metalness": 0.5,
+                "roughness": 0.5
+            },
+            "metalDark": {
+                "color": "#2d3036"
+            }
+        }
+    },
+    "bookcase": {
+        "file": "bookcase.glb",
+        "height": 1.9,
+        "rotation": 0,
+        "materials": {
+            "wood": {
+                "color": "#a5774f",
+                "roughness": 0.7
+            }
+        }
+    },
+    "filing_cabinet": {
+        "file": "filing_cabinet.glb",
+        "height": 1.3,
+        "rotation": 0,
+        "materials": {
+            "wood": {
+                "color": "#8f98a3",
+                "metalness": 0.5,
+                "roughness": 0.45
+            },
+            "metal": {
+                "color": "#5c636e",
+                "metalness": 0.8,
+                "roughness": 0.3
+            }
+        }
+    },
+    "drawers": {
+        "file": "drawers.glb",
+        "height": 0.6,
+        "rotation": 0,
+        "materials": {
+            "wood": {
+                "color": "#d8d4cc",
+                "roughness": 0.55
+            },
+            "metal": {
+                "color": "#7a8088",
+                "metalness": 0.7,
+                "roughness": 0.3
+            }
+        }
+    },
+    "floor_lamp": {
+        "file": "floor_lamp.glb",
+        "height": 1.6,
+        "rotation": 0
+    },
+    "tv": {
+        "file": "tv.glb",
+        "height": 0.7,
+        "rotation": 0,
+        "materials": {
+            "metalDark": {
+                "color": "#111317",
+                "roughness": 0.2
+            },
+            "metal": {
+                "color": "#2a2e35"
+            }
+        }
+    },
+    "table": {
+        "file": "table.glb",
+        "height": 0.75,
+        "rotation": 0,
+        "materials": {
+            "wood": {
+                "color": "#b58d64",
+                "roughness": 0.55
+            }
+        }
+    },
+    "table_round": {
+        "file": "table_round.glb",
+        "height": 0.75,
+        "rotation": 0,
+        "materials": {
+            "wood": {
+                "color": "#e9e6e0",
+                "roughness": 0.4
+            }
+        }
+    },
+    "coat_rack": {
+        "file": "coat_rack.glb",
+        "height": 1.8,
+        "rotation": 0
+    },
+    "books": {
+        "file": "books.glb",
+        "height": 0.2,
+        "rotation": 0
+    },
+    "car_sedan": {
+        "file": "car_sedan.glb",
+        "height": 1.45,
+        "rotation": 0,
+        "materials": {
+            "colormap": {
+                "metalness": 0.35,
+                "roughness": 0.35
+            }
+        }
+    },
+    "car_sedan_sports": {
+        "file": "car_sedan_sports.glb",
+        "height": 1.35,
+        "rotation": 0,
+        "materials": {
+            "colormap": {
+                "metalness": 0.35,
+                "roughness": 0.35
+            }
+        }
+    },
+    "car_suv": {
+        "file": "car_suv.glb",
+        "height": 1.7,
+        "rotation": 0,
+        "materials": {
+            "colormap": {
+                "metalness": 0.35,
+                "roughness": 0.35
+            }
+        }
+    },
+    "car_suv_luxury": {
+        "file": "car_suv_luxury.glb",
+        "height": 1.7,
+        "rotation": 0,
+        "materials": {
+            "colormap": {
+                "metalness": 0.35,
+                "roughness": 0.35
+            }
+        }
+    },
+    "car_hatchback": {
+        "file": "car_hatchback.glb",
+        "height": 1.4,
+        "rotation": 0,
+        "materials": {
+            "colormap": {
+                "metalness": 0.35,
+                "roughness": 0.35
+            }
+        }
+    },
+    "van": {
+        "file": "van.glb",
+        "height": 2.1,
+        "rotation": 0,
+        "materials": {
+            "colormap": {
+                "metalness": 0.35,
+                "roughness": 0.35
+            }
+        }
+    },
+    "delivery_truck": {
+        "file": "delivery_truck.glb",
+        "height": 3,
+        "rotation": 0,
+        "materials": {
+            "colormap": {
+                "metalness": 0.35,
+                "roughness": 0.35
+            }
+        }
+    }
+}

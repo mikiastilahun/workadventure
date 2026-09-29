@@ -60,6 +60,7 @@ export abstract class Character extends Container implements OutlineableInterfac
     private bubble: RenderTexture | null | DOMElement = null;
     private usernameDisplay: UsernameDisplay | undefined;
     private availabilityStatus: AvailabilityStatusType = AvailabilityStatus.ONLINE;
+    private _currentSayMessage: { text: string; type: SayMessageType } | undefined;
     public readonly playerName: string;
     public sprites: Map<string, Sprite>;
     protected _lastDirection: PositionMessage_Direction = PositionMessage_Direction.DOWN;
@@ -542,6 +543,7 @@ export abstract class Character extends Container implements OutlineableInterfac
 
     say(text: string, type: SayMessageType) {
         this.scene.markDirty();
+        this._currentSayMessage = text ? { text, type } : undefined;
         if (this.bubble !== null) {
             this.remove(this.bubble);
             this.bubble.destroy();
@@ -792,6 +794,14 @@ export abstract class Character extends Container implements OutlineableInterfac
 
     public get lastDirection(): PositionMessage_Direction {
         return this._lastDirection;
+    }
+
+    /**
+     * The message currently displayed in the speech bubble of the character, if any (used by the 3D view, which
+     * renders its own bubbles).
+     */
+    public get currentSayMessage(): { text: string; type: SayMessageType } | undefined {
+        return this._currentSayMessage;
     }
 
     public handlePressSpacePlayerTextCallback() {

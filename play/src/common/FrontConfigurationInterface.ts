@@ -12,6 +12,7 @@ export interface FrontConfigurationInterface {
     JITSI_URL: string | undefined;
     JITSI_PRIVATE_MODE: boolean;
     ENABLE_MAP_EDITOR: boolean;
+    DEFAULT_VIEW_MODE: "2d" | "3d";
     PUBLIC_MAP_STORAGE_PREFIX: string | undefined;
     MAX_USERNAME_LENGTH: number;
     MAX_PER_GROUP: number;

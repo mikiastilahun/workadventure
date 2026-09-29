@@ -36,6 +36,8 @@ services:
       WOKA_SPEED: 27
       # Disable tutorial
       ENABLE_TUTORIAL: "false"
+      # The legacy e2e suite drives the 2D view. The 3D tests force the 3D view with the "view=3d" URL parameter.
+      DEFAULT_VIEW_MODE: "2d"
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.play.rule=Host(`play.workadventure.localhost`)"

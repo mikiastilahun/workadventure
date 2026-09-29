@@ -35,7 +35,9 @@
     import Companion from "../../Companion/Companion.svelte";
     import ExternalComponents from "../../ExternalModules/ExternalComponents.svelte";
     import CamSettingsIcon from "../../Icons/CamSettingsIcon.svelte";
-    import { IconBug, IconFileDownload, IconHelpCircle, IconLogout } from "../../Icons";
+    import { IconBug, IconFileDownload, IconHelpCircle, IconLogout, IconShirt } from "../../Icons";
+    import { avatarEditorVisibleStore } from "../../../World3d/Stores/AvatarStore";
+    import { preferredViewModeStore } from "../../../World3d/Stores/ViewModeStore";
     import ProfilIcon from "../../Icons/ProfilIcon.svelte";
     import SettingsIcon from "../../Icons/SettingsIcon.svelte";
     import Woka from "../../Woka/WokaFromUserId.svelte";
@@ -173,6 +175,18 @@
         >
             <Woka userId={-1} placeholderSrc="" customWidth="26px" />
         </ActionBarButton>
+        {#if preferredViewModeStore.webglSupported}
+            <ActionBarButton
+                label={$LL.world3d.hud.avatar()}
+                dataTestId="profile-menu-avatar3d"
+                onclick={() => {
+                    avatarEditorVisibleStore.set(true);
+                    openedMenuStore.close("profileMenu");
+                }}
+            >
+                <IconShirt font-size="22" />
+            </ActionBarButton>
+        {/if}
         <ActionBarButton
             label={$LL.actionbar.companion()}
             onclick={() => {
